@@ -196,6 +196,29 @@ body {
       text-align: center;
     }
 
+    /* Service */
+    .feature-box {
+  transition: all 0.30s ease;
+  background: #fff;
+}
+
+/* Hover Effect */
+.feature-box:hover {
+  transform: translateY(-10px) !important;
+  /* box-shadow: 0 10px 25px rgba(200, 0, 0, 0.15); */
+  border-color: #c80000 !important;
+}
+
+/* Optional: text একটু smooth change */
+/* .feature-box:hover {
+  color: #c80000;
+} */
+
+/* .feature-box:hover {
+  box-shadow: 0 10px 25px rgba(200, 0, 0, 0.2),
+              0 0 10px rgba(200, 0, 0, 0.15);
+} */
+
 
     /* Testimonial */
     .testimonial-section {
