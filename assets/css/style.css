@@ -197,6 +197,55 @@ body {
     }
 
 
+    /* Testimonial */
+    .testimonial-section {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.testimonial-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: 0.4s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+
+.user-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.testimonial-card h4 {
+  margin-bottom: 10px;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.stars {
+  color: #ffc107;
+  font-size: 18px;
+}
+
+
 
     @media only screen and (max-width: 768px){
       .heroTitle{
