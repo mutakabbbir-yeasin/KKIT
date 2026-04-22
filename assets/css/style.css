@@ -189,13 +189,6 @@ body {
       transition: 0.3s;
     }
 
-    footer {
-      background: #111;
-      color: #fff;
-      padding: 30px 0;
-      text-align: center;
-    }
-
   /* Feature section */
   .feature-box {
   transition: all 0.30s ease;
@@ -311,6 +304,36 @@ body {
 .newsletter-form button:hover {
   background: #000;
   transform: translateY(-2px);
+}
+
+/* footer */
+.footerLogo {
+  height: 90px;
+  width: 300px;
+}
+.footer-link {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 6px;
+  transition: 0.3s;
+}
+
+.footer-link:hover {
+  color: #fff;
+  padding-left: 5px;
+}
+
+.social-icon {
+  color: #c80000dd;
+  font-size: 17px !important;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.social-icon:hover {
+  /* color: #fff; */
+  transform: translateY(-3px);
 }
 
 /* 🔥 Responsive */
