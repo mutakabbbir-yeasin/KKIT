@@ -196,32 +196,20 @@ body {
       text-align: center;
     }
 
-    /* Service */
-    .feature-box {
+  /* Feature section */
+  .feature-box {
   transition: all 0.30s ease;
   background: #fff;
 }
 
-/* Hover Effect */
 .feature-box:hover {
   transform: translateY(-10px) !important;
   /* box-shadow: 0 10px 25px rgba(200, 0, 0, 0.15); */
   border-color: #c80000 !important;
 }
 
-/* Optional: text একটু smooth change */
-/* .feature-box:hover {
-  color: #c80000;
-} */
-
-/* .feature-box:hover {
-  box-shadow: 0 10px 25px rgba(200, 0, 0, 0.2),
-              0 0 10px rgba(200, 0, 0, 0.15);
-} */
-
-
-    /* Testimonial */
-    .testimonial-section {
+/* Testimonial */
+.testimonial-section {
   padding: 60px 20px;
   background: #f9f9f9;
   text-align: center;
@@ -268,10 +256,102 @@ body {
   font-size: 18px;
 }
 
+/* newsletter */
+.newsletter {
+  background: linear-gradient(135deg, #c80000dd, #ff4d4d);
+  padding: 60px 20px;
+  color: #fff;
+}
+
+.newsletter-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+.newsletter-content h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.newsletter-content p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+/* Form */
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 30px;
+  width: 60%;
+  max-width: 350px;
+  outline: none;
+  font-size: 14px;
+}
+
+.newsletter-form button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.newsletter-form button:hover {
+  background: #000;
+  transform: translateY(-2px);
+}
+
+/* 🔥 Responsive */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .newsletter-content h2 {
+    font-size: 26px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+  }
+
+  .newsletter-form button {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .newsletter {
+    padding: 40px 15px;
+  }
+
+  .newsletter-content h2 {
+    font-size: 22px;
+  }
+
+  .newsletter-content p {
+    font-size: 14px;
+  }
+}
 
 
-    @media only screen and (max-width: 768px){
-      .heroTitle{
-      margin-top: 10px;
-    }
-    }
+@media only screen and (max-width: 768px){
+  .heroTitle{
+    margin-top: 10px;
+  }
+}
