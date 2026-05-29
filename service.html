@@ -1,147 +1,851 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KK IT || Build your career pompous</title>
-    <link rel="shortcut icon" href="assets/images/logo/favicon.png" type="image/x-icon">
-    
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KK IT - Services</title>
 
-    <!-- Bootstrap icons cdn -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-     <!-- font awesome cdn -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- swiper animation cdn -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+  <style>
+    :root {
+      --primary: #c80000;
+      --secondary: #000000;
+      --light: #ffffff;
+      --gray: #666666;
+      --border: #e9e9e9;
+    }
 
-     <!-- css file link -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
 
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg ">
-  <div class="container">
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #ffffff;
+      color: #111111;
+      overflow-x: hidden;
+    }
 
-    <!-- 1st Column: Logo -->
-    <a class="navbar-brand" href="#">
-      <img class="logoSize" src="assets/images/logo/logo.png" alt="logo">
-    </a>
+    section {
+      padding: 100px 0;
+      position: relative;
+    }
 
-    <!-- Mobile Toggle -->
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#nav"
-    >
-      <span class="navbar-toggler-icon"></i></span>
-    </button>
+    .section-title {
+      color: var(--primary);
+      font-size: 42px;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+    }
 
-    <!-- Collapsible Content -->
-    <div class="collapse navbar-collapse" id="nav">
+    .section-title::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 3px;
+      background: rgba(200,0,0,0.2);
+    }
 
-      <!-- 2nd Column: Menu (Center) -->
-      <ul class="navbar-nav mx-auto gap-2 text-center">
-        <!-- <li class="nav-item"><a class="nav-link" href="">Home</a></li> -->
-        <li class="nav-item"><a class="nav-link" href="about-us.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="course.html">Courses</a></li>
-        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-      </ul>
+    .section-title::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 3px;
+      background: var(--primary);
+      transition: width 0.5s ease;
+      z-index: 2;
+    }
 
-      <!-- 3rd Column: Auth Buttons (Right) -->
-      <div class="d-flex gap-2 justify-content-center mt-3 mt-lg-0">
-        <a class="btn loginBtn" href="#login">Login</a>
-        <a class="btn loginBtn" href="#signup">Sign Up</a>
-      </div>
+    .section-title:hover::before {
+      width: 100%;
+    }
 
-    </div>
-  </div>
-    </nav>
+    .sub-text {
+      color: var(--gray);
+      font-size: 17px;
+      line-height: 1.8;
+      max-width: 750px;
+      margin: auto;
+    }
 
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+      overflow: hidden;
+    }
 
+    .hero-badge {
+      display: inline-block;
+      background: rgba(200,0,0,0.08);
+      color: var(--primary);
+      padding: 10px 20px;
+      border-radius: 50px;
+      font-weight: 600;
+      margin-bottom: 25px;
+      animation: fadeUp 0.8s ease;
+    }
 
-     <!-- Footer -->
-    <footer class="footer  text-light pt-5 pb-3">
-  <div class="container">
-    <div class="row">
+    .hero h1 {
+      font-size: 72px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 25px;
+      animation: fadeUp 1s ease;
+    }
 
-      <!-- Company Info -->
-      <div class="col-lg-4 col-md-6 mb-4 text-center">
-        <a href="index.html">
-          <img class="footerLogo" src="assets/images/logo/logo.png" alt="logo">
-        </a>
-        <!-- Social Icons -->
-        <div class="mt-4 ">
-          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
-          <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
-          <a href="#" class="social-icon"><i class="bi bi-twitter-x"></i></a>
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+    .hero p {
+      color: #555;
+      font-size: 18px;
+      line-height: 1.9;
+      margin-bottom: 35px;
+      animation: fadeUp 1.2s ease;
+    }
+
+    .hero-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 15px 35px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: 0.4s ease;
+      text-decoration: none;
+      display: inline-block;
+      animation: fadeUp 1.4s ease;
+      box-shadow: 0 10px 25px rgba(200,0,0,0.15);
+    }
+
+    .hero-btn:hover {
+      background: #000;
+      transform: translateY(-4px);
+      color: white;
+    }
+
+    .hero-image {
+      position: relative;
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .hero-card {
+      background: white;
+      border-radius: 30px;
+      padding: 40px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+      border: 1px solid #f1f1f1;
+    }
+
+    .hero-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(200,0,0,0.08);
+      color: var(--primary);
+      font-size: 36px;
+      margin-bottom: 25px;
+    }
+
+    .mini-stats {
+      display: flex;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .mini-box {
+      flex: 1;
+      padding: 20px;
+      border-radius: 18px;
+      background: #fafafa;
+      text-align: center;
+      transition: 0.4s ease;
+    }
+
+    .mini-box:hover {
+      transform: translateY(-5px);
+      background: var(--primary);
+      color: white;
+    }
+
+    .mini-box h4 {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    /* SERVICES */
+    .service-card {
+      background: white;
+      border-radius: 24px;
+      padding: 40px 30px;
+      border: 1px solid var(--border);
+      transition: 0.5s ease;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 0;
+      left: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(200,0,0,0.03), rgba(200,0,0,0.08));
+      transition: 0.5s ease;
+      z-index: 0;
+    }
+
+    .service-card:hover::before {
+      height: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+    }
+
+    .service-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      background: rgba(200,0,0,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 34px;
+      margin-bottom: 25px;
+      transition: 0.4s ease;
+    }
+
+    .service-card:hover .service-icon {
+      background: var(--primary);
+      color: white;
+      transform: rotateY(180deg);
+    }
+
+    .service-card h4 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .service-card p {
+      color: #666;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+
+    .service-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .service-list li {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .service-list li i {
+      color: var(--primary);
+    }
+
+    /* WHY US */
+    .why-box {
+      padding: 35px;
+      border-radius: 24px;
+      background: #fafafa;
+      transition: 0.4s ease;
+      border: 1px solid transparent;
+      height: 100%;
+    }
+
+    .why-box:hover {
+      transform: translateY(-10px);
+      border-color: rgba(200,0,0,0.15);
+      background: white;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+    }
+
+    .why-box i {
+      font-size: 45px;
+      color: var(--primary);
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .why-box h5 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .why-box p {
+      color: #666;
+      line-height: 1.8;
+    }
+
+    /* PROCESS */
+    .process-card {
+      text-align: center;
+      position: relative;
+      padding: 30px;
+    }
+
+    .process-number {
+      width: 80px;
+      height: 80px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      font-weight: 700;
+      margin: auto auto 25px;
+      transition: 0.4s ease;
+    }
+
+    .process-card:hover .process-number {
+      transform: scale(1.1) rotate(10deg);
+    }
+
+    .process-card h5 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .process-card p {
+      color: #666;
+      line-height: 1.8;
+    }
+
+    /* CTA */
+    .cta-section {
+      background: linear-gradient(135deg, #111111 0%, #000000 100%);
+      border-radius: 40px;
+      padding: 80px 60px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .cta-section::before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: rgba(200,0,0,0.15);
+      border-radius: 50%;
+      top: -120px;
+      right: -100px;
+    }
+
+    .cta-section h2 {
+      color: white;
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-section p {
+      color: rgba(255,255,255,0.8);
+      font-size: 18px;
+      line-height: 1.8;
+      margin-bottom: 35px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-btn {
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      padding: 15px 35px;
+      border-radius: 50px;
+      font-weight: 600;
+      transition: 0.4s ease;
+      display: inline-block;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-btn:hover {
+      background: white;
+      color: black;
+      transform: translateY(-5px);
+    }
+
+    /* SCROLL ANIMATION */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
+    }
+
+    .fade-in.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* KEYFRAMES */
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 992px) {
+      .hero {
+        padding-top: 120px;
+        text-align: center;
+      }
+
+      .hero h1 {
+        font-size: 52px;
+      }
+
+      .hero-image {
+        margin-top: 60px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .section-title {
+        font-size: 34px;
+      }
+
+      .cta-section {
+        padding: 60px 30px;
+      }
+
+      .cta-section h2 {
+        font-size: 36px;
+      }
+
+      section {
+        padding: 80px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-6">
+          <div class="hero-badge">
+            KK IT Professional Digital Services
+          </div>
+
+          <h1>
+            We Build <span>Modern Digital</span> Solutions For Your Business
+          </h1>
+
+          <p>
+            KK IT delivers professional web solutions, branding, marketing, and SEO services that help businesses grow online with confidence, creativity, and performance-driven strategies.
+          </p>
+
+          <a href="#services" class="hero-btn">
+            Explore Services
+          </a>
         </div>
-      
-      </div>
 
-      <!-- Quick Links -->
-      <div class="col-lg-2 col-md-6 mb-4 text-center">
-        <h6 class="fw-bold text-dark">Quick Links</h6>
-        <ul class="list-unstyled">
-          <li><a href="index.html" class="footer-link text-dark">Home</a></li>
-          <li><a href="course.html" class="footer-link text-dark">Courses</a></li>
-          <li><a href="blog.html" class="footer-link text-dark">Blog</a></li>
-          <li><a href="contact.html" class="footer-link text-dark">Contact</a></li>
-        </ul>
-      </div>
+        <div class="col-lg-6">
+          <div class="hero-image">
+            <div class="hero-card">
+              <div class="hero-icon">
+                <i class="bi bi-code-slash"></i>
+              </div>
 
-      <!-- Courses -->
-      <div class="col-lg-3 col-md-6 mb-4 text-center">
-        <h6 class="fw-bold text-dark">Courses</h6>
-        <ul class="list-unstyled text-dark">
-          <li><a href="course-preview.html" class="footer-link text-dark">Web Design</a></li>
-          <li><a href="course-preview.html" class="footer-link text-dark">Full Stack Development</a></li>
-          <li><a href="course-preview.html" class="footer-link text-dark">WordPress</a></li>
-          <li><a href="course-preview.html" class="footer-link text-dark">Freelancing</a></li>
-        </ul>
-      </div>
+              <h3 class="fw-bold mb-3">Creative IT Solutions</h3>
 
-      <!-- Contact -->
-      <div class="col-lg-3 col-md-6 mb-4 text-center">
-        <h6 class="fw-bold text-dark">Contact</h6>
-        <p class="small mb-1 text-dark"><i class="bi bi-geo-alt-fill text-danger me-2"></i> Dhaka, Bangladesh</p>
-        <p class="small mb-1 text-dark"><i class="bi bi-telephone-fill text-danger me-2"></i> +880 1234-567890</p>
-        <p class="small mb-1 text-dark">
-          <i class="bi bi-envelope-fill text-danger me-2"></i> info@kkit.com
+              <p class="text-muted">
+                Modern websites, smart marketing, SEO optimization, branding, and business growth solutions crafted for startups, companies, and professionals.
+              </p>
+
+              <div class="mini-stats">
+                <div class="mini-box">
+                  <h4>5+</h4>
+                  <small>Services</small>
+                </div>
+
+                <div class="mini-box">
+                  <h4>100%</h4>
+                  <small>Creative</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+
+      <div class="text-center mb-5 fade-in">
+        <h2 class="section-title">Our Services</h2>
+        <p class="sub-text">
+          We provide professional and modern digital solutions to help businesses establish a strong online presence and grow successfully.
         </p>
-
-        
       </div>
 
+      <div class="row g-4">
+
+        <div class="col-lg-4 col-md-6 fade-in">
+          <div class="service-card">
+            <div class="service-content">
+              <div class="service-icon">
+                <i class="bi bi-laptop"></i>
+              </div>
+
+              <h4>Web Design</h4>
+
+              <p>
+                Professional, responsive, and user-friendly website designs crafted to represent your business beautifully.
+              </p>
+
+              <ul class="service-list">
+                <li><i class="bi bi-check-circle-fill"></i> Responsive Design</li>
+                <li><i class="bi bi-check-circle-fill"></i> Modern UI/UX</li>
+                <li><i class="bi bi-check-circle-fill"></i> Mobile Friendly</li>
+                <li><i class="bi bi-check-circle-fill"></i> Fast Loading</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 fade-in">
+          <div class="service-card">
+            <div class="service-content">
+              <div class="service-icon">
+                <i class="bi bi-code-square"></i>
+              </div>
+
+              <h4>Web Development</h4>
+
+              <p>
+                Powerful and scalable web development solutions for businesses that need high-performance websites.
+              </p>
+
+              <ul class="service-list">
+                <li><i class="bi bi-check-circle-fill"></i> Dynamic Websites</li>
+                <li><i class="bi bi-check-circle-fill"></i> Business Solutions</li>
+                <li><i class="bi bi-check-circle-fill"></i> Secure Development</li>
+                <li><i class="bi bi-check-circle-fill"></i> Clean Coding</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 fade-in">
+          <div class="service-card">
+            <div class="service-content">
+              <div class="service-icon">
+                <i class="bi bi-palette"></i>
+              </div>
+
+              <h4>Graphics Design</h4>
+
+              <p>
+                Creative graphic designs that build strong brand identity and visually attract your audience.
+              </p>
+
+              <ul class="service-list">
+                <li><i class="bi bi-check-circle-fill"></i> Logo Design</li>
+                <li><i class="bi bi-check-circle-fill"></i> Social Media Design</li>
+                <li><i class="bi bi-check-circle-fill"></i> Brand Identity</li>
+                <li><i class="bi bi-check-circle-fill"></i> Creative Banners</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 fade-in">
+          <div class="service-card">
+            <div class="service-content">
+              <div class="service-icon">
+                <i class="bi bi-graph-up-arrow"></i>
+              </div>
+
+              <h4>Digital Marketing</h4>
+
+              <p>
+                Result-driven digital marketing strategies to increase your online visibility, traffic, and conversions.
+              </p>
+
+              <ul class="service-list">
+                <li><i class="bi bi-check-circle-fill"></i> Brand Promotion</li>
+                <li><i class="bi bi-check-circle-fill"></i> Campaign Management</li>
+                <li><i class="bi bi-check-circle-fill"></i> Audience Targeting</li>
+                <li><i class="bi bi-check-circle-fill"></i> Conversion Strategy</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 fade-in">
+          <div class="service-card">
+            <div class="service-content">
+              <div class="service-icon">
+                <i class="bi bi-search"></i>
+              </div>
+
+              <h4>SEO & Facebook Marketing</h4>
+
+              <p>
+                Improve your website ranking and grow your business reach through smart SEO and Facebook marketing campaigns.
+              </p>
+
+              <ul class="service-list">
+                <li><i class="bi bi-check-circle-fill"></i> On-Page SEO</li>
+                <li><i class="bi bi-check-circle-fill"></i> Keyword Optimization</li>
+                <li><i class="bi bi-check-circle-fill"></i> Facebook Ads</li>
+                <li><i class="bi bi-check-circle-fill"></i> Lead Generation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
+  </section>
 
-    <hr class="border-secondary">
 
-    <!-- Bottom -->
-    <div class="text-center small text-dark">
-      © 2026 KK IT. All rights reserved.
+  <!-- WHY CHOOSE US -->
+  <section>
+    <div class="container">
+
+      <div class="text-center mb-5 fade-in">
+        <h2 class="section-title">Why Choose KK IT</h2>
+        <p class="sub-text">
+          We combine creativity, technology, and strategy to deliver professional digital services that help businesses grow faster.
+        </p>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-lg-4 col-md-6 fade-in">
+          <div class="why-box">
+            <i class="bi bi-lightning-charge-fill"></i>
+            <h5>Fast Performance</h5>
+            <p>
+              We create optimized and high-speed digital solutions for the best user experience.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 fade-in">
+          <div class="why-box">
+            <i class="bi bi-stars"></i>
+            <h5>Modern Design</h5>
+            <p>
+              Our modern and premium design approach helps your business stand out online.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 fade-in">
+          <div class="why-box">
+            <i class="bi bi-headset"></i>
+            <h5>Reliable Support</h5>
+            <p>
+              We provide professional support and guidance to ensure your business success.
+            </p>
+          </div>
+        </div>
+
+      </div>
     </div>
-  </div>
-    </footer>
+  </section>
 
 
+  <!-- PROCESS -->
+  <section>
+    <div class="container">
 
-    <!-- JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/js/script.js"></script>
-  </body>
+      <div class="text-center mb-5 fade-in">
+        <h2 class="section-title">Our Working Process</h2>
+        <p class="sub-text">
+          Our workflow is smooth, transparent, and designed to deliver high-quality results efficiently.
+        </p>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-lg-3 col-md-6 fade-in">
+          <div class="process-card">
+            <div class="process-number">1</div>
+            <h5>Discussion</h5>
+            <p>
+              We understand your business goals and project requirements carefully.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 fade-in">
+          <div class="process-card">
+            <div class="process-number">2</div>
+            <h5>Planning</h5>
+            <p>
+              We prepare the right strategy and modern design structure for success.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 fade-in">
+          <div class="process-card">
+            <div class="process-number">3</div>
+            <h5>Development</h5>
+            <p>
+              Our team develops and optimizes the project with attention to detail.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 fade-in">
+          <div class="process-card">
+            <div class="process-number">4</div>
+            <h5>Launch</h5>
+            <p>
+              We deliver and support your business for long-term online growth.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section>
+    <div class="container">
+      <div class="cta-section fade-in">
+
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h2>
+              Ready To Grow Your Business Online?
+            </h2>
+
+            <p>
+              KK IT is ready to help you with professional website development, branding, marketing, SEO, and creative digital solutions.
+            </p>
+          </div>
+
+          <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+            <a href="#" class="cta-btn">
+              Contact Us
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- JAVASCRIPT -->
+  <script>
+
+    // Scroll Animation
+    const fadeElements = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    fadeElements.forEach(el => observer.observe(el));
+
+
+    // Smooth Button Effect
+    const buttons = document.querySelectorAll('.hero-btn, .cta-btn');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const x = e.offsetX;
+        const y = e.offsetY;
+
+        btn.style.backgroundPosition = `${x}px ${y}px`;
+      });
+    });
+
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>
