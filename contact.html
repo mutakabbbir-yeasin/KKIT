@@ -24,6 +24,124 @@
 
      <!-- css file link -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      .contactHero{
+    background:#fff;
+}
+
+.heroBadge{
+    background:#ffe5e5;
+    color:#c80000;
+    padding:10px 20px;
+    border-radius:50px;
+    font-weight:600;
+}
+
+.heroTitle{
+    font-size:60px;
+    font-weight:800;
+    margin:20px 0;
+}
+
+.heroTitle span{
+    color:#c80000;
+}
+
+.heroText{
+    color:#666;
+    line-height:1.9;
+}
+
+.heroBtn{
+    display:inline-block;
+    background:#c80000;
+    color:#fff;
+    padding:14px 30px;
+    border-radius:50px;
+    text-decoration:none;
+    transition:.4s;
+}
+
+.heroBtn:hover{
+    background:#000;
+    color:#fff;
+}
+
+.sectionTitle{
+    color:#c80000;
+    font-weight:700;
+    display:inline-block;
+    border-bottom:3px solid #c80000;
+    padding-bottom:8px;
+}
+
+.contactHeroCard,
+.formBox,
+.officeBox,
+.infoCard,
+.ctaBox{
+    background:#fff;
+    padding:35px;
+    border-radius:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.contactMiniCard{
+    display:flex;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.contactMiniCard i,
+.infoCard i{
+    color:#c80000;
+    font-size:30px;
+}
+
+.infoCard{
+    text-align:center;
+    transition:.4s;
+}
+
+.infoCard:hover{
+    transform:translateY(-10px);
+}
+
+.form-control,
+.form-select{
+    padding:14px;
+}
+
+.sendBtn{
+    background:#c80000;
+    color:#fff;
+    border:none;
+    padding:14px 35px;
+    border-radius:50px;
+}
+
+.sendBtn:hover{
+    background:#000;
+}
+
+.ctaBox{
+    background:#000;
+    color:#fff;
+}
+
+.ctaBox h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.officeBox ul{
+    padding-left:20px;
+}
+
+.officeBox li{
+    margin-bottom:12px;
+}
+    </style>
   </head>
 
   <body>
@@ -69,118 +187,262 @@
   </div>
     </nav>
 
-    <section class="contact-section d-flex align-items-center">
-        <div class="container">
+<!-- CONTACT HERO -->
+<section class="contactHero py-5">
+    <div class="container">
+        <div class="row align-items-center min-vh-75">
 
-            <div class="section-title text-center mb-5">
-                <h2>Contact KK IT</h2>
-                <p>
-                    We build modern digital experiences with creativity and innovation.
-                    Feel free to contact us for web development, software solutions,
-                    training, or any IT support.
+            <div class="col-lg-6" data-aos="fade-right">
+                <span class="heroBadge">Get In Touch</span>
+
+                <h1 class="heroTitle">
+                    Let's Discuss Your
+                    <span>Next Project</span>
+                </h1>
+
+                <p class="heroText">
+                    Have an idea or business requirement? KK IT is ready to help
+                    you with professional web development, graphics design,
+                    digital marketing, SEO and branding solutions.
                 </p>
+
+                <a href="#contactForm" class="heroBtn">
+                    Send Message
+                </a>
             </div>
 
-            <div class="row g-4">
+            <div class="col-lg-6" data-aos="fade-left">
 
-                <!-- Left Side -->
-                <div class="col-lg-5">
-                    <div class="contact-card h-100">
+                <div class="contactHeroCard">
 
-                        <div class="contact-info-box">
-                            <div class="icon-box">
-                                <i class="bi bi-geo-alt"></i>
-                            </div>
-                            <div class="info-text">
-                                <h5>Office Address</h5>
-                                <p>Mirpur-10, Dhaka, Bangladesh</p>
-                            </div>
+                    <div class="contactMiniCard">
+                        <i class="bi bi-telephone-fill"></i>
+                        <div>
+                            <h5>Call Us</h5>
+                            <p>+880 1234-567890</p>
                         </div>
-
-                        <div class="contact-info-box">
-                            <div class="icon-box">
-                                <i class="bi bi-envelope"></i>
-                            </div>
-                            <div class="info-text">
-                                <h5>Email Address</h5>
-                                <p>info@kkit.com</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-info-box">
-                            <div class="icon-box">
-                                <i class="bi bi-telephone"></i>
-                            </div>
-                            <div class="info-text">
-                                <h5>Phone Number</h5>
-                                <p>+8801707995952</p>
-                            </div>
-                        </div>
-
-                        <div class="contact-info-box">
-                            <div class="icon-box">
-                                <i class="bi bi-clock"></i>
-                            </div>
-                            <div class="info-text">
-                                <h5>Working Hours</h5>
-                                <p>Sat - Thu : 9AM - 5PM</p>
-                            </div>
-                        </div>
-
-                        <div class="social-links mt-4">
-                            <a href="#"><i class="bi bi-facebook"></i></a>
-                            <a href="#"><i class="bi bi-linkedin"></i></a>
-                            <a href="#"><i class="bi bi-instagram"></i></a>
-                            <a href="#"><i class="bi bi-youtube"></i></a>
-                        </div>
-
                     </div>
-                </div>
 
-                <!-- Right Side -->
-                <div class="col-lg-7">
-                    <div class="contact-card">
-
-                        <form id="contactForm">
-
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <input type="text" class="form-control" placeholder="Your Name" required>
-                                </div>
-
-                                <div class="col-md-6 mb-3">
-                                    <input type="email" class="form-control" placeholder="Your Email" required>
-                                </div>
-                            </div>
-
-                            <div class="mb-3">
-                                <input type="text" class="form-control" placeholder="Subject" required>
-                            </div>
-
-                            <div class="mb-4">
-                                <textarea rows="6" class="form-control"
-                                    placeholder="Write Your Message..." required></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-send">
-                                Send Message
-                            </button>
-
-                            <div class="alert alert-success mt-4 success-message" id="successMessage">
-                                Your message has been sent successfully!
-                            </div>
-
-                        </form>
-
+                    <div class="contactMiniCard">
+                        <i class="bi bi-envelope-fill"></i>
+                        <div>
+                            <h5>Email Us</h5>
+                            <p>info@kkit.com</p>
+                        </div>
                     </div>
+
+                    <div class="contactMiniCard">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <div>
+                            <h5>Visit Office</h5>
+                            <p>Dhaka, Bangladesh</p>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
 
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
+<!-- CONTACT INFO -->
+<section class="py-5">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="sectionTitle">Contact Information</h2>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-6">
+                <div class="infoCard">
+                    <i class="bi bi-telephone-fill"></i>
+                    <h5>Phone</h5>
+                    <p>+880 1234-567890</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="infoCard">
+                    <i class="bi bi-envelope-fill"></i>
+                    <h5>Email</h5>
+                    <p>info@kkit.com</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="infoCard">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <h5>Location</h5>
+                    <p>Dhaka, Bangladesh</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="infoCard">
+                    <i class="bi bi-clock-fill"></i>
+                    <h5>Working Hours</h5>
+                    <p>9 AM - 8 PM</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- FORM SECTION -->
+<section id="contactForm" class="py-5 bg-light">
+    <div class="container">
+
+        <div class="row g-5">
+
+            <div class="col-lg-7">
+
+                <div class="formBox">
+
+                    <h2 class="sectionTitle mb-4">
+                        Send Us A Message
+                    </h2>
+
+                    <form>
+
+                        <div class="row">
+
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" placeholder="Full Name">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <input type="email" class="form-control" placeholder="Email Address">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <input type="text" class="form-control" placeholder="Phone Number">
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <select class="form-select">
+                                    <option>Select Service</option>
+                                    <option>Web Design</option>
+                                    <option>Web Development</option>
+                                    <option>Graphics Design</option>
+                                    <option>SEO</option>
+                                    <option>Digital Marketing</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12 mb-3">
+                                <input type="text" class="form-control" placeholder="Subject">
+                            </div>
+
+                            <div class="col-12 mb-4">
+                                <textarea rows="6" class="form-control" placeholder="Write Message"></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <button class="sendBtn">
+                                    Send Message
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-5">
+
+                <div class="officeBox">
+
+                    <h3>Why Contact KK IT?</h3>
+
+                    <ul>
+                        <li>Free Consultation</li>
+                        <li>Fast Response Time</li>
+                        <li>Professional Team</li>
+                        <li>Modern Solutions</li>
+                        <li>Dedicated Support</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-5">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="sectionTitle">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="accordion" id="faq">
+
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        How long does a website take?
+                    </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faq">
+                    <div class="accordion-body">
+                        Usually between 1-4 weeks depending on project scope.
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item mt-3">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        Do you provide SEO services?
+                    </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faq">
+                    <div class="accordion-body">
+                        Yes, we provide complete SEO and digital marketing solutions.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5">
+    <div class="container">
+
+        <div class="ctaBox text-center">
+
+            <h2>Ready To Grow Your Business?</h2>
+
+            <p>
+                Contact KK IT today and let's build something amazing together.
+            </p>
+
+            <a href="#" class="heroBtn">
+                Get Started
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+     <!-- Footer -->
     <footer class="footer  text-light pt-5 pb-3">
   <div class="container">
     <div class="row">
@@ -252,5 +514,11 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+      AOS.init({
+  duration:1000,
+  once:true
+});
+    </script>
   </body>
 </html>
